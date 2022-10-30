@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
+
+import { motion } from 'framer-motion';
 
 const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -23,6 +25,15 @@ const Search = () => {
     const searchWithQueryURL = `${searchURL}?${apiKey}&query=${query}`;
     getSearchedMovies(searchWithQueryURL);
   }, [query]);
+
+    //CAROUSEL
+    const carousel = useRef()
+    const [width, setWidth] = useState(0)
+    
+    useEffect(()=> {
+      console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+      setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
+    }, [])
 
 
   return (

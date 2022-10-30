@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import MovieCard from "./MovieCard";
+
+import { motion } from 'framer-motion';
 
 import "../pages/MovieDetails";
 
@@ -21,12 +23,24 @@ const PopularMovies = () => {
     getPopularMovies(topRatedUrl);
   }, []);
 
+  //CAROUSEL
+  const carousel = useRef()
+  const [width, setWidth] = useState(0)
+  
+  useEffect(()=> {
+    console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
+  }, [])
+
+
   return (
     <div className="container">
       <h2 className="title">Popular movies</h2>
-      <div className="movies-container">
-        {popularMovies.length > 0 && popularMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
-      </div>
+      <motion.div whileTap={{cursor: 'grabbing'}} className="motion-container">
+        <motion.div drag='x' dragConstraints={{right:0, left: width}} className="movies-container">
+          {popularMovies.length > 0 && popularMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
+        </motion.div>
+      </motion.div>
     </div>
   )
 }
