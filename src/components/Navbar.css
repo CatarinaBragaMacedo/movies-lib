@@ -25,7 +25,7 @@
   
   #navbar form button {
     background-color: #d80202;
-    /* border: 2px solid #d80202; */
+    border: 2px solid #d80202;
     border-radius: 4px;
     color: #000;
     padding: 0.3rem;

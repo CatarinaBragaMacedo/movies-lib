@@ -1,8 +1,9 @@
 .container .title {
     color: #fff;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 2rem 0 1rem;
+    font-size: 2rem;
+    /* text-align: center; */
+    /* margin: 2rem 1rem 1rem; */
+    padding-left: 1.3rem;
   }
   
   .title .query-text {
@@ -11,22 +12,24 @@
   
   .movies-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1rem;
-    max-width: 800px;
+    /* flex-wrap: wrap; */
     margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    
   }
   
   .movies-container div {
-    width: 30%;
-    color: #fff;
-    margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 20%;
+    color: #fff;
+    margin-bottom: 2.5rem;
     background-color: #111;
     padding: 1rem;
+    margin: 5px;
+
   }
   
   .movies-container div img {
@@ -35,11 +38,13 @@
   
   .movies-container div img,
   .movies-container div p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
   
   .movies-container div h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: lighter;
+    font-size: 1.3rem;
   }
   
   .movies-container div svg {
@@ -51,7 +56,7 @@
     border: 2px solid #d80202;
     border-radius: 4px;
     color: #000;
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
     text-align: center;
     font-weight: bold;
   }
