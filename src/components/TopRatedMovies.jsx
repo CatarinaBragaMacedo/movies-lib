@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
+import { motion } from 'framer-motion';
+
 import "../pages/MovieDetails";
 
 const moviesURL = import.meta.env.VITE_API;
@@ -24,9 +26,9 @@ const TopRatedMovies = () => {
   return (
     <div className="container">
       <h2 className="title">Top rated movies</h2>
-      <div className="movies-container">
+      <motion.div className="movies-container">
         {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
-      </div>
+      </motion.div>
     </div>
   )
 }
