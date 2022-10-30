@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MovieCard from "../components/MovieCard";
+import MovieCard from "../components/movieCard";
 
 import "./MoviesGrid.css";
 
@@ -21,7 +21,7 @@ const Home = () => {
     getTopRatedMovies(topRatedUrl);
   }, []);
 
-  console.log(topMovies);
+  // console.log(topMovies);
 
   return (
     <div className="container">

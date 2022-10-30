@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import {
   BsGraphUp,
-  BsWallet2,
+  BsCalendarCheck,
   BsHourglassSplit,
   BsFillFileEarmarkTextFill,
 } from "react-icons/bs";
@@ -47,27 +47,28 @@ const Movie = () => {
         <>
           <MovieCard movie={movie} showLink={false} />
           <p className="tagline">{movie.tagline}</p>
+          
           <div className="info">
             <h3>
-              <BsWallet2 className="icon"/> Orçamento:
+              <BsCalendarCheck className="icon"/> Release Date :
             </h3>
-            <p>{formatCurrency(movie.budget)}</p>
+            <p>{formatCurrency(movie.release_date)}</p>
           </div>
           <div className="info">
             <h3>
-              <BsGraphUp className="icon"/> Receita:
+              <BsGraphUp className="icon"/> Revenue:
             </h3>
             <p>{formatCurrency(movie.revenue)}</p>
           </div>
           <div className="info">
             <h3>
-              <BsHourglassSplit className="icon"/> Duração:
+              <BsHourglassSplit className="icon"/> Run Time:
             </h3>
-            <p>{movie.runtime} minutos</p>
+            <p>{movie.runtime} minutes</p>
           </div>
           <div className="info description">
             <h3>
-              <BsFillFileEarmarkTextFill className="icon"/> Descrição:
+              <BsFillFileEarmarkTextFill className="icon"/> Summary:
             </h3>
             <p>{movie.overview}</p>
           </div>

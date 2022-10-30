@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App'
 
 import Home from "./pages/Home";
-import Movie from "./pages/Movie";
+import MovieDetails from "./pages/MovieDetails";
 import Search from "./pages/Search";
 
 import './index.css'
@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route element={<App />}>
           <Route path="/" element={<Home />} />
-          <Route path="movie/:id" element={<Movie />} />
+          <Route path="movie/:id" element={<MovieDetails />} />
           <Route path="search" element={<Search />} />
         </Route>
       </Routes>
