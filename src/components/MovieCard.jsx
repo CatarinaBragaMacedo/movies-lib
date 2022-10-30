@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { FaStar } from "react-icons/fa";
 
 const imagesURL = import.meta.env.VITE_IMG;
-const MoviesURL = import.meta.env.VITE_API;
 
 const MovieCard = ({ movie, showLink = true }) => {
   return (

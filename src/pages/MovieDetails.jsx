@@ -38,8 +38,11 @@ const Movie = () => {
     getMovie(movieUrl);
   }, []);
 
-
-
+  // useEffect(() => {
+  //   const topRatedUrl = `${moviesURL}similar?${apiKey}`;
+    
+  //   getTopRatedMovies(topRatedUrl);
+  // }, []);
 
   return (
     <div className="movie-page">
