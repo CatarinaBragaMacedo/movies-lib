@@ -41,10 +41,12 @@ const Search = () => {
       <h2 className="title">
         Results for: <span className="query-text">{query}</span>
       </h2>
-      <div className="movies-container">
-        {movies.length > 0 &&
-          movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
-      </div>
+      <motion.div whileTap={{cursor: 'grabbing'}} className="motion-container">
+        <motion.div drag='x' dragConstraints={{right:0, left: width}} className="movies-container">
+          {movies.length > 0 &&
+            movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+        </motion.div>
+      </motion.div>
     </div>
   )
 }

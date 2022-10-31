@@ -23,21 +23,12 @@ const TopRatedMovies = () => {
     getTopRatedMovies(topRatedUrl);
   }, []);
 
-  //CAROUSEL
-  const carousel = useRef()
-  const [width, setWidth] = useState(0)
-  
-  useEffect(()=> {
-    console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
-  }, [])
-
   return (
     <div className="container">
       <h2 className="title">Top rated movies</h2>
 
       <motion.div whileTap={{cursor: 'grabbing'}} className="motion-container">
-          <motion.div drag='x' dragConstraints={{right:0, left: width}} className="movies-container">
+          <motion.div drag='x' dragConstraints={{right:0, left: -3500}} className="movies-container">
             {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
           </motion.div>
       </motion.div>

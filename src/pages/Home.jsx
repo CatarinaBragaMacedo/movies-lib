@@ -1,7 +1,10 @@
 import React from 'react'
+
 import TopRatedMovies from '../components/TopRatedMovies';
 import PopularMovies from '../components/PopularMovies';
 import UpcomingMovies from '../components/UpcomingMovies';
+
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -9,7 +12,7 @@ const Home = () => {
       <TopRatedMovies />
       <PopularMovies />
       <UpcomingMovies />
-      
+      <Footer />
     </>
   )
 }
