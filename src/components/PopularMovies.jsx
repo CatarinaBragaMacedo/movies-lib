@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from "react";
-import MovieCard from "./MovieCard";
+import { useEffect, useState} from "react";
+import MovieCard from "./movie-card/MovieCard";
 
 import { motion } from 'framer-motion';
 

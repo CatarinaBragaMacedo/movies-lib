@@ -1,13 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import MovieCard from "../components/MovieCard";
 
 import { motion } from 'framer-motion';
 
-const searchURL = import.meta.env.VITE_SEARCH;
-const apiKey = import.meta.env.VITE_API_KEY;
+import MovieCard from "../components/movie-card/MovieCard";
 
 import "./MoviesGrid.css";
+
+const searchURL = import.meta.env.VITE_SEARCH;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 const Search = () => {
   const [searchParams] = useSearchParams();
@@ -38,7 +39,7 @@ const Search = () => {
         </motion.div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

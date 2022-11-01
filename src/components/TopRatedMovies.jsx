@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from "react";
-import MovieCard from "./MovieCard";
-
+import { useEffect, useState} from "react";
 import { motion } from 'framer-motion';
+
+import MovieCard from "./movie-card/MovieCard";
 
 import "../pages/MovieDetails.css";
 
@@ -26,15 +26,13 @@ const TopRatedMovies = () => {
   return (
     <div className="container">
       <h2 className="title">Top rated movies</h2>
-
       <motion.div whileTap={{cursor: 'grabbing'}} className="motion-container">
           <motion.div drag='x' dragConstraints={{right:0, left: -3500}} className="movies-container">
             {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
           </motion.div>
       </motion.div>
-
     </div>
-  )
-}
+  );
+};
 
-export default TopRatedMovies
+export default TopRatedMovies;

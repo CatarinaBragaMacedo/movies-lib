@@ -35,7 +35,7 @@ const Navbar = () => {
             </button>
         </form>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

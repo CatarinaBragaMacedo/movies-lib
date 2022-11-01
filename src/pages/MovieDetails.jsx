@@ -8,8 +8,8 @@ import {
   BsFillFileEarmarkTextFill,
 } from "react-icons/bs";
 
-import MovieCard from "../components/MovieCard";
-import Footer from '../components/Footer'
+import MovieCard from "../components/movie-card/MovieCard";
+import Footer from '../components/footer/Footer';
 
 import "./MovieDetails.css";
 
@@ -43,11 +43,9 @@ const Movie = () => {
     <div className="movie-page-container">
       {movie && (
         <>
-          
           <div className="movie-page">
             <MovieCard movie={movie} showLink={false} />
             <p className="tagline">{movie.tagline}</p>
-            
             <div className="info">
               <h3>
                 <BsCalendarCheck className="icon"/> Release Date :
@@ -78,7 +76,7 @@ const Movie = () => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Movie
+export default Movie;

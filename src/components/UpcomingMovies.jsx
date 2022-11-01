@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
-import MovieCard from "./MovieCard";
-
 import { motion } from 'framer-motion';
+
+import MovieCard from "./movie-card/MovieCard";
 
 import "../pages/MovieDetails.css";
 
@@ -32,7 +32,7 @@ const UpcomingMovies = () => {
         </motion.div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default UpcomingMovies
+export default UpcomingMovies;

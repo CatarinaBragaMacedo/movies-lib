@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 import TopRatedMovies from '../components/TopRatedMovies';
 import PopularMovies from '../components/PopularMovies';
 import UpcomingMovies from '../components/UpcomingMovies';
 
-import Footer from '../components/Footer'
+import Footer from '../components/footer/Footer';
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <UpcomingMovies />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
