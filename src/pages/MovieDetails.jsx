@@ -9,6 +9,7 @@ import {
 } from "react-icons/bs";
 
 import MovieCard from "../components/MovieCard";
+import Footer from '../components/Footer'
 
 import "./MovieDetails.css";
 
@@ -39,36 +40,41 @@ const Movie = () => {
   }, []);
 
   return (
-    <div className="movie-page">
+    <div className="movie-page-container">
       {movie && (
         <>
-          <MovieCard movie={movie} showLink={false} />
-          <p className="tagline">{movie.tagline}</p>
           
-          <div className="info">
-            <h3>
-              <BsCalendarCheck className="icon"/> Release Date :
-            </h3>
-            <p>{formatCurrency(movie.release_date)}</p>
+          <div className="movie-page">
+            <MovieCard movie={movie} showLink={false} />
+            <p className="tagline">{movie.tagline}</p>
+            
+            <div className="info">
+              <h3>
+                <BsCalendarCheck className="icon"/> Release Date :
+              </h3>
+              <p>{formatCurrency(movie.release_date)}</p>
+            </div>
+            <div className="info">
+              <h3>
+                <BsGraphUp className="icon"/> Revenue:
+              </h3>
+              <p>{formatCurrency(movie.revenue)}</p>
+            </div>
+            <div className="info">
+              <h3>
+                <BsHourglassSplit className="icon"/> Run Time:
+              </h3>
+              <p>{movie.runtime} minutes</p>
+            </div>
+            <div className="info description">
+              <h3>
+                <BsFillFileEarmarkTextFill className="icon"/> Summary:
+              </h3>
+              <p>{movie.overview}</p>
+            </div>
+            <button className="btn">Rate me!</button>
           </div>
-          <div className="info">
-            <h3>
-              <BsGraphUp className="icon"/> Revenue:
-            </h3>
-            <p>{formatCurrency(movie.revenue)}</p>
-          </div>
-          <div className="info">
-            <h3>
-              <BsHourglassSplit className="icon"/> Run Time:
-            </h3>
-            <p>{movie.runtime} minutes</p>
-          </div>
-          <div className="info description">
-            <h3>
-              <BsFillFileEarmarkTextFill className="icon"/> Summary:
-            </h3>
-            <p>{movie.overview}</p>
-          </div>
+          <Footer />
         </>
       )}
     </div>
