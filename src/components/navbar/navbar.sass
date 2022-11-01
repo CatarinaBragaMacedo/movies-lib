@@ -1,37 +1,40 @@
 @use '../../sass/variables.sass'
 
 #navbar
-  display: flex
+  display: variables.$flex
   justify-content: space-between
   align-items: center
   padding: 1rem 2rem
-  background-color: #121212
-
+  background-color: variables.$navbar-bg
 
 #navbar h2 a
-  display: flex
+  display: variables.$flex
   align-items: center
   gap: 0.5rem
 
-
 #navbar form
-  display: flex
+  display: variables.$flex
   gap: 0.5rem
 
-
-#navbar input
+.nav-input
   padding: 0.2rem 0.8rem
   border-radius: 4px
   border: none
 
-
-#navbar form button
-  background-color: #d80202
-  border: 2px solid #d80202
+.nav-btn
+  background-color: variables.$color-ligth-red
+  border: 2px solid variables.$color-ligth-red
   border-radius: 4px
-  color: #000
+  color: variables.$color-black
   padding: 0.3rem
   font-size: 1.3rem
-  display: flex
+  display: variables.$flex
   align-items: center
   cursor: pointer
+
+.wrapper
+  display: variables.$flex
+  align-items: center
+  justify-content: center
+  gap: 1rem
+

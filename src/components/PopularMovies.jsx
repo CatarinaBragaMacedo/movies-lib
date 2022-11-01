@@ -3,7 +3,7 @@ import MovieCard from "./movie-card/MovieCard";
 
 import { motion } from 'framer-motion';
 
-import "../pages/MovieDetails";
+import "../pages/movie-details/MovieDetails";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;

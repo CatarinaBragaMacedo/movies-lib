@@ -23,17 +23,22 @@ const Navbar = () => {
         <h2>
             <Link to="/"><BiCameraMovie /> MoviesLib</Link>
         </h2>
-        <form onSubmit={handleSubmit}>
-            <input 
-              type="text" 
-              placeholder="Search for a movie"
-              onChange={(e) => setSearch(e.target.value)}
-              value={search}
-            />
-            <button type="submit">
-                <BiSearchAlt2 />
-            </button>
-        </form>
+        <div className="wrapper">
+          <h4>
+            <Link to="/stats">Stats Page</Link>
+          </h4>
+          <form onSubmit={handleSubmit}>
+              <input 
+                className="nav-input"
+                type="text" 
+                placeholder="Search for a movie"
+                onChange={(e) => setSearch(e.target.value)}
+                value={search}/>
+              <button type="submit" className="nav-btn">
+                  <BiSearchAlt2 />
+              </button>
+          </form>
+      </div>
     </nav>
   );
 };

@@ -1,5 +1,15 @@
 @use './variables'
 
+::-webkit-scrollbar
+  width: 10px
+
+::-webkit-scrollbar-track
+  background-color: variables.$scrollbar-bg
+
+::-webkit-scrollbar-thumb
+  background-color: variables.$color-dark-red
+  border-radius: 4rem
+
 *
   font-family: variables.$font
   margin: 0
@@ -12,18 +22,9 @@ body
 
 a
   text-decoration: none
-  color: variables.$color-ligh-red
+  color: variables.$color-ligth-red
   transition: 0.5s
 
   &hover
     color: variables.$color-dark-red
 
-::-webkit-scrollbar
-  width: 10px
-
-::-webkit-scrollbar-track
-  background-color: variables.$scrollbar-bg
-
-::-webkit-scrollbar-thumb
-  background-color: variables.$color-dark-red
-  border-radius: 4rem

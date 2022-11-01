@@ -8,10 +8,10 @@ import {
   BsFillFileEarmarkTextFill,
 } from "react-icons/bs";
 
-import MovieCard from "../components/movie-card/MovieCard";
-import Footer from '../components/footer/Footer';
+import MovieCard from "../../components/movie-card/MovieCard";
+import Footer from '../../components/footer/Footer';
 
-import "./MovieDetails.css";
+import "./movie-details.sass";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
