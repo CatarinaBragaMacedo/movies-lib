@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import Charts from "../components/Charts";
+import Charts from "../components/charts/Charts";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;

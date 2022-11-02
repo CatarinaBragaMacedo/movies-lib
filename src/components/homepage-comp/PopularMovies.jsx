@@ -1,9 +1,9 @@
 import { useEffect, useState} from "react";
-import MovieCard from "./movie-card/MovieCard";
+import MovieCard from "../movie-card/MovieCard";
 
 import { motion } from 'framer-motion';
 
-import "../pages/movie-details/MovieDetails";
+import "../../sass/movies-grid.sass";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;

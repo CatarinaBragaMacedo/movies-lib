@@ -27,7 +27,7 @@ const Navbar = () => {
           <h4>
             <Link to="/stats">Stats Page</Link>
           </h4>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="nav-form">
               <input 
                 className="nav-input"
                 type="text" 

@@ -7,7 +7,7 @@ import App from './App';
 
 import Home from "./pages/Home";
 import MovieDetails from "./pages/movie-details/MovieDetails";
-import Search from "./pages/Search";
+import Search from "./components/search/Search";
 import StatsPage from "./pages/StatsPage";
 
 import './sass/main.sass';

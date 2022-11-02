@@ -3,9 +3,9 @@ import { useSearchParams } from "react-router-dom";
 
 import { motion } from 'framer-motion';
 
-import MovieCard from "../components/movie-card/MovieCard";
+import MovieCard from "../movie-card/MovieCard";
 
-import "./MoviesGrid.css";
+import "../../sass/movies-grid.sass";
 
 const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
