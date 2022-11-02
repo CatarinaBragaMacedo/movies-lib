@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 import Charts from "../components/charts/Charts";
+import Footer from '../components/footer/Footer';
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -23,6 +24,7 @@ const StatsPage = () => {
   return (
     <>
       <Charts topRatedMovies={topMovies} />
+      <Footer />
     </>
   );
 };
