@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { FaStar } from "react-icons/fa";
 
-import "../../pages/movie-details/movie-details.sass";
+import "../../pages/movie-details/movie-details.sass"
 
 const imagesURL = import.meta.env.VITE_IMG;
 

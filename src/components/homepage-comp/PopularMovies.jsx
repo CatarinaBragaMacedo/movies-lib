@@ -32,7 +32,7 @@ const PopularMovies = () => {
         </motion.div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default PopularMovies
+export default PopularMovies;

@@ -2,6 +2,8 @@ import * as React from "react";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 
+import "./rating.sass";
+
 export const RatingComponent = () => {
   return (
     <div className="wrapper-rating">

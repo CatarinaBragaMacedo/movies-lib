@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+import { RatingComponent } from "../../components/rating/Rating";
 import {
   BsGraphUp,
   BsCalendarCheck,
@@ -70,8 +72,13 @@ const Movie = () => {
               </h3>
               <p>{movie.overview}</p>
             </div>
-            <button className="btn">Rate me!</button>
           </div>
+          <div>
+            <RatingComponent />
+          </div>
+          <Link to="/" className="back-link">
+            Back to home
+          </Link>
           <Footer />
         </>
       )}

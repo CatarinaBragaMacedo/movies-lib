@@ -25,7 +25,7 @@ const Charts = ({ topRatedMovies }) => {
   ];
 
   const options = {
-    colors: ["#870808", "#d80202"],
+    colors: ["#a50000", "#d80202"],
 
     chart: {
       toolbar: {
@@ -82,7 +82,6 @@ const Charts = ({ topRatedMovies }) => {
 
     title: {
       text: "Top 10 Movies",
-      // align: "center",
       margin: 40,
       offsetY: 20,
       style: {
@@ -93,17 +92,9 @@ const Charts = ({ topRatedMovies }) => {
       },
     },
 
-    // subtitle: {
-    //   text: "Top 10 Movies by votes",
-    //   align: "center",
-    //   margin: 20,
-    //   offsetY: 55,
-    //   style: {
-    //     color: "#ffffff",
-    //   },
-    // },
     legend: {
       position: "right",
+
       markers: {
         width: 24,
         height: 24,
@@ -116,15 +107,11 @@ const Charts = ({ topRatedMovies }) => {
         offsetX: 0,
         offsetY: 0,
         },
-        // style: {
-        //   color: "#ffffff",
-        //      },
-      
     },
   };
 
   return (
-    <div>
+    <div className="charts-container">
       <ReactApexChart options={options} series={series} type="bar" height={350} />
     </div>
   );

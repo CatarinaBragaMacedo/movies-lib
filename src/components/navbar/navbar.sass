@@ -1,18 +1,23 @@
 @use '../../sass/variables.sass'
+@use '../../sass/mixins.sass'
 
 #navbar
-  display: variables.$flex
+  display: flex
   justify-content: space-between
   align-items: center
   padding: 1rem 2rem
   background-color: variables.$navbar-bg
+  h2
+    display: flex
+    align-items: center
+    gap: variables.$small-gap
+  a
+    display: flex
+    align-items: center
+    gap: variables.$small-gap
 
-#navbar h2 a
-  display: variables.$flex
-  align-items: center
-  gap: variables.$small-gap
 .nav-form
-  display: variables.$flex
+  display: flex
   gap: variables.$small-gap
 
 .nav-input
@@ -27,13 +32,11 @@
   color: variables.$color-black
   padding: 0.3rem
   font-size: variables.$font-medium
-  display: variables.$flex
+  display: flex
   align-items: center
   cursor: pointer
 
 .wrapper
-  display: variables.$flex
-  align-items: center
-  justify-content: center
+  @include mixins.flex-center
   gap: 1rem
 
